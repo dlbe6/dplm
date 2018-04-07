@@ -12,49 +12,62 @@
 		box-sizing: border-box
 
 *::-webkit-input-placeholder
-	color: #666
+	color: $main-color !important
 	opacity: 1
 
 *:-moz-placeholder
-	color: #666
+	color: $main-color !important
 	opacity: 1
 
 *::-moz-placeholder
-	color: #666
+	color: $main-color !important
 	opacity: 1
 
 *:-ms-input-placeholder
-	color: #666
+	color: $main-color !important
 	opacity: 1
 
 body input:focus:required:invalid,
 body textarea:focus:required:invalid
-	color: #666
+	color: $main-color !important
 body input:required:valid,
 body textarea:required:valid
-	color: #666
+	color: $main-color !important
 
 html, body
 	height: 100%
-
+	font-size: 18px 
+	color: $main-color !important
+a.nav-link
+	color: $main-color !important
 body
-	font-size: 16px
-	min-width: 320px
+
+	min-width: 710px
 	position: relative
 	line-height: 1.65
 	font-family: $default-font
 	overflow-x: hidden
-
-.img-responsive
-	display: block
-	max-width: 100%
-	height: auto
-
+section
+	margin: 40px 0px
 .text-center
 	text-align: center
 
 ::selection
 	background-color: $accent
 	color: #fff
+.logo
+	font-family: Capture it, arial
+.logoorange
+	display: inline-block
+	color: $orange
+.menu
+	color: $main-color !important
+	font-weight: 800
+	padding-top: 8px
+.catandsearch
+	background-color: $orange
+	color: #fff
+	padding: 30px 0px
+	font-size: 24px
 
 @import "media" // Всегда в конце
