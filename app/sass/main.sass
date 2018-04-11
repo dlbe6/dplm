@@ -51,12 +51,13 @@ section
 	margin: 40px 0px
 .text-center
 	text-align: center
-
+.dropdown-toggle::after 
+	content: none !important
 ::selection
 	background-color: $main-color
 	color: #fff
 .logo
-	font-family: Capture it, arial
+	font-family: $capture
 .logoorange
 	display: inline-block
 	color: $orange
@@ -64,29 +65,84 @@ section
 	color: $main-color !important
 	font-weight: 800
 	padding-top: 8px
+.nav-link
+	transition: .1s
+	&:hover
+		transform: scale(1.05)
+	
 .catandsearch
 	background-color: $orange
 	color: #fff
 	padding: 30px 0px
 	font-size: 24px
+.catalog
+	background-color: rgba(233,182,117,.8)  !important
+	margin-top: -9px !important
+	border: none !important
+	border-radius: 0 0 10px 10px !important
+	margin-left: -20px !important
+	width: 250px
+.dropdown-item
+	color: #fff !important
+	font-weight: 400 !important
+	font-family: $default-font !important
+	line-height: 15px
+	&:hover
+		color: $main-color !important
 .fas
 	font-size: 16px
 .slider
-
-	position: relative
-	width: 100%
-	.slide
-		position: relative
+	margin-top: -40px	
+.slide
+	&-1
+		background-image: url(../img/slides/slide1/slide-1-bg.png)
 		color: #fff
-		&-bg			
-			background-image: url(../img/slidebg1.jpg)
-			position: absolute
-			top: 0
-			bottom: 0
-			left: 0
-			right: 0
-			margin-top: -40px
-		&-content
-			position: relative
-			z-index: 1
+		background-size: 50%
+	&-2
+		background-image: url(../img/slides/slide2/slide-2-bg.png)
+		color: $main-color
+		background-size: 50%
+	&-3
+		background-image: url(../img/slides/slide3/slide-3-bg.png)
+		color: #fff
+		background-size: 50%
+.big
+	&-itemname
+		font-size: 36px
+		text-transform: uppercase
+		font-family: $capture
+		margin-top: 35px
+	&-prices
+		font-size: 48px
+		text-transform: uppercase
+		// font-family: $capture
+		margin-top: 30px
+		font-weight: 800
+		>s
+			font-size: 36px
+			line-height: 10px
+s.light
+	color: rgba(255,255,255,0.8)
+s.dark
+	color: rgba(51,70,87,0.8)
+.big
+	&-btn
+		background-color: $orange
+		border: none
+		margin: 20px 0px
+		padding: 7px 30px
+		border-radius: 25px 25px
+		text-transform: uppercase
+		font-size: 24px
+		font-weight: 800
+		transition: .1s
+		&:hover
+			transform: scale(1.1)
+.itemimg
+	&-1
+		margin-top: 100px
+	&-2
+		margin-top: -30px
+	&-3
+		margin-top: 30px
 @import "media" // Всегда в конце
