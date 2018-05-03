@@ -3,7 +3,8 @@ $(function() {
 	// Custom JS
 	$(".owl-carousel").owlCarousel({
     items:1,
-    loop: true
+    loop: true,
+    nav:true
     
 	});
 
