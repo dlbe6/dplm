@@ -72,7 +72,14 @@ section
 	transition: .1s
 	&:hover
 		transform: scale(1.05)
-	
+.phone
+	position: relative
+	bottom: 20px	
+	margin-bottom: -25px
+	font-weight: 500
+	span
+		
+		font-weight: 800
 .catandsearch
 	background-color: $orange
 	color: #fff
@@ -192,4 +199,29 @@ s.dark
 	background: lighten($orange, 20)
 .owl-theme .owl-dots .owl-dot.active span, .owl-theme .owl-dots .owl-dot:hover span
 	background: darken($orange, 10)
+.cart
+	& span
+		font-size: 36px
+		font-weight: 400
+		margin-right: 10px
+.goods
+	h2
+		font-weight: 700
+		text-transform: uppercase
+		border-bottom: $orange solid 7px
+	span
+		border-bottom: solid 2px
+		position: relative
+		top: -11px
+		width: 100%
+		z-index: -1
+.goodcards
+	// margin-top: 30px
+	margin: auto
+.item
+	&-good
+		border: solid
+
+	
+		margin: auto
 @import "media" // Всегда в конце
