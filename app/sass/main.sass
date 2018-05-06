@@ -280,6 +280,7 @@ s.dark
 			b
 				font-size: 24px
 				padding-right: 10px
+
 section.subscribe
 	background-color: $orange
 	padding: 20px 0
@@ -307,17 +308,36 @@ ul.breadcrumb li+li:before
 		// text-decoration: none
 		color: $orange
 		font-weight: 600	
-.current 
-  
 
 .photo img 
   width: 350px
 
 nav a 
   display:inline-block
-  
-
+ 
 nav img 
   display:block
+.itemcard
+	&-price
+		text-align: center
+		b
+			font-size: 24px
+		s 
+			color: lighten($main-color,15%)
 
+	&-count
+		border-radius: 20px
+		border-color: $main-color
+		width: 150px
+		padding-left: 10px
+		margin-top: 10px
+	&-btn
+		background-color: $orange
+		color: #fff
+		text-transform: uppercase
+		border-radius: 20px !important
+		font-weight: 500 !important
+.main-features
+	margin-top: 20px
+	list-style-type: none
 @import "media" // Всегда в конце
