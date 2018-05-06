@@ -35,6 +35,15 @@ body textarea:focus:required:invalid
 body input:required:valid,
 body textarea:required:valid
 	color: $main-color !important
+input:focus::-webkit-input-placeholder
+    color: transparent!important
+
+input:focus::-moz-placeholder
+    color: transparent!important
+
+input:focus:-moz-placeholder
+    color: transparent!important
+
 
 html, body
 	height: 100%
@@ -51,6 +60,8 @@ body
 	overflow-x: hidden
 section
 	margin: 40px 0px
+section.header
+	margin: 20px 0px
 .text-center
 	text-align: center
 
@@ -59,11 +70,16 @@ section
 ::selection
 	background-color: $orange
 	color: #fff
+
 .logo
 	font-family: $capture
+	a, a:hover
+		text-decoration: none
+		color: $main-color
 .logoorange
 	display: inline-block
 	color: $orange
+
 .menu
 	color: $main-color !important
 	font-weight: 800
@@ -85,12 +101,15 @@ section
 	color: #fff
 	padding: 30px 0px
 	font-size: 24px
+
 .catalog
 	background-color: rgba($orange, .9)  !important
-	margin-top: 30px !important
+	
+	margin-top: 40px !important
+	margin-left: -20px !important
 	border: none !important
 	border-radius: 0 0 10px 10px !important
-	margin-left: -20px !important
+	
 	width: 250px
 .dropdown-item
 	color: #fff !important
@@ -106,8 +125,10 @@ section
 .slide
 	&-1
 		background-image: url(../img/slides/slide1/slide-1-bg.png)
-		color: #fff
-		background-size: 50%
+		color: $main-color
+		background-size: 30%
+		button
+			color: #fff
 	&-2
 		background-image: url(../img/slides/slide2/slide-2-bg.png)
 		color: $main-color
@@ -116,12 +137,14 @@ section
 			color: #fff
 	&-3
 		background-image: url(../img/slides/slide3/slide-3-bg.png)
-		color: #fff
-		background-size: 50%
+		color: $main-color
+		background-size: 20%
+		button
+			color: #fff
 	&-4
 		background-image: url(../img/slides/slide4/slide-4-bg.png)
-		background-color: #3d25c4;
-		color: #fff
+		button
+			color: #fff	
 .big
 	&-itemname
 		font-size: 30px
@@ -184,11 +207,21 @@ s.dark
 	&-prev
 		top: 40% !important
 		left: 1%
+		font-size: 52px !important
 		position: absolute
+		transition: .2s
+		&:hover
+			color: lighten($orange, 15%) !important
+			background: none !important
 	&-next		
 		top: 40% !important
+		font-size: 52px !important
 		right: 1%
 		position: absolute
+		transition: .2s
+		&:hover
+			color: lighten($orange, 15%) !important
+			background: none !important
 	&-dots
 		margin-top: -35px
 		position: relative
@@ -215,13 +248,76 @@ s.dark
 		top: -11px
 		width: 100%
 		z-index: -1
+	a, a:hover
+		text-decoration: none
+		color: $main-color
 .goodcards
-	// margin-top: 30px
+	margin-top: 30px !important
 	margin: auto
 .item
 	&-good
-		border: solid
+		transition: .15s
+		&:hover
+			// box-shadow: inset hoff voff blur color
+			box-shadow: 20px 20px 20px rgba(0,0,0,0.3) 
+			margin: auto
+			transform: scale(1.005)
+	&-card
+		&-cat
+			color: lighten($main-color, 20)
+			font-size: 14px
+			font-weight: 500
+		&-name
+			font-weight: 500
+			font-size: 20px
+		&-image
+			img
+				width: 100%
+				margin-top: 20px
+				padding-bottom: 20px
+		&-price
+			padding-bottom: 15px
+			b
+				font-size: 24px
+				padding-right: 10px
+section.subscribe
+	background-color: $orange
+	padding: 20px 0
+	h2
+		text-transform: uppercase
+		font-size: 24px
+		color: #fff
+	.envelope
+		color: #fff
+		font-size: 68px
+		font-weight: 800
+	.subscribe
+		&-button
+			background-color: $main-color
+			border: none
+			border-radius: 0 20px 20px 0 !important
+			color: #fff
+		&-field
+			margin-top: 10px
+ul.breadcrumb li+li:before 
+    padding: 8px
+    content: "\003E"
+.breadcrumb
+	a,a:hover
+		// text-decoration: none
+		color: $orange
+		font-weight: 600	
+.current 
+  
 
-	
-		margin: auto
+.photo img 
+  width: 350px
+
+nav a 
+  display:inline-block
+  
+
+nav img 
+  display:block
+
 @import "media" // Всегда в конце
