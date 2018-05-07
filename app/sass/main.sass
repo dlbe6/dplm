@@ -276,6 +276,7 @@ s.dark
 				margin-top: 20px
 				padding-bottom: 20px
 		&-price
+
 			padding-bottom: 15px
 			b
 				font-size: 24px
@@ -320,6 +321,8 @@ nav img
 .itemcard
 	&-price
 		text-align: center
+		// position: fixed
+		background-color: #fff
 		b
 			font-size: 24px
 		s 
@@ -327,7 +330,8 @@ nav img
 
 	&-count
 		border-radius: 20px
-		border-color: $main-color
+		border-color: $main-color 
+		border-style: solid
 		width: 150px
 		padding-left: 10px
 		margin-top: 10px
@@ -336,8 +340,47 @@ nav img
 		color: #fff
 		text-transform: uppercase
 		border-radius: 20px !important
-		font-weight: 500 !important
+		font-weight: 600 !important
+		transition: .2s !important
+		&:hover
+			background-color: lighten($orange, 5%)
+	&-item-name
+		border-bottom: solid
+		border-color: $orange			
 .main-features
 	margin-top: 20px
 	list-style-type: none
+.itemcard-item-name h2
+	font-size: 30px
+section.chars
+	margin-bottom: 0
+	h2
+		font-weight: 700
+		text-transform: uppercase
+		border-bottom: $orange solid 7px
+	span
+		border-bottom: solid 2px
+		position: relative
+		top: -11px
+		width: 100%
+		z-index: -1
+.itemcard-chars
+	// width: 100%
+	// border: solid	
+	width: 100%
+	& th
+		width: 50%
+		border-bottom: solid 1px
+		border-color: lighten($main-color, 45%) !important
+		font-weight: 400
+	& tr:hover
+		background-color: rgba($orange,.15)
+caption
+	caption-side: top !important
+	font-size: 24px
+	color: $main-color !important
+	border-bottom: solid
+	padding-bottom: 0px !important
+	margin-bottom: 15px
+
 @import "media" // Всегда в конце
